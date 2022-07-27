@@ -120,7 +120,8 @@ public class RestService implements HandlerInterceptor {
         return url.toString();
     }
 
-    private void authenticateRequest(SystemExchange systemExchange, HttpServletRequest request, String url, FuseModel client) throws Exception {
+    private void authenticateRequest(SystemExchange systemExchange, 
+            HttpServletRequest request, String url, FuseModel client) throws Exception {
         authenticateTimestamp(systemExchange, request);
         authenticateSignature(systemExchange, request, url, client);
     }
