@@ -1,7 +1,7 @@
 FROM openjdk:8
 MAINTAINER Linus Ndege <linus.ndege@interswitchgroup.com>
 
-LABEL Description="This image is used to run Identity service"
+LABEL Description="This image is used to run tims service"
 
 LABEL Vendor="Interswitch East Africa Ltd."
 
@@ -9,9 +9,9 @@ LABEL Version="1.0.0"
 
 ENV TZ=Africa/Nairobi
 
-ENV CONFIG_LOCATION="/opt/service/identity-service/config/application.properties"
+ENV CONFIG_LOCATION="/src/main/resources/application.properties"
 
-ADD target/identity-service-1.0.0-SNAPSHOT.jar identity-service-1.0.0-SNAPSHOT.jar
+ADD target/tims-service-1.0.0-SNAPSHOT.jar tims-service-1.0.0-SNAPSHOT.jar
 
 EXPOSE 8003
 
